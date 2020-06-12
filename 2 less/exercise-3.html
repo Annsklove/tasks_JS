@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 3</title>
+</head>
+
+<body>
+    <ul>
+        <li><a href="exercise-1.html">задание 1</a></li>
+        <li><a href="exercise-2.html">задание 2</a></li>
+        <li><a href="exercise-3.html">задание 3</a></li>
+        <li><a href="exercise-4.html">задание 4</a></li>
+        <li><a href="exercise-5.html">задание 5</a></li>
+        <li><a href="exercise-6.html">задание 6</a></li>
+    </ul>
+    <hr>
+
+    <h1>Урок 2 - Задание 3</h1>
+    <p>
+        <b>
+            Объявить две переменные a и b и задать им целочисленные произвольные начальные
+            значения.
+        </b><br><br>
+        Затем написать скрипт, который работает по следующему принципу:<br>
+        - если a и b положительные, вывести их разность (ноль можно считать положительным числом);<br>
+        - если а и b отрицательные, вывести их произведение;<br>
+        - * (этот пункт по сложнее, делайте по желанию) если а и b разных знаков, вывести их сумму;<br>
+        Подсказка, чтобы сделать последний пункт можно также попробовать погуглить по запросу<br>
+        «получить знак числа javascript»<br>
+    </p>
+
+    <script>
+        'use strict';
+
+        let a = parseInt(prompt("введите первое целое число")),
+            b = parseInt(prompt("введите второе целое число"));
+
+        if (a >= 0 && b >=0) {
+            let diff = a - b;
+            alert("разность чисел = " + diff);
+            // console.log(diff);
+        } else if (a < 0 && b < 0) {
+            let mult = a*b;
+            alert("произведение чисел = " + mult);
+            // console.log(mult);
+        } else if (Math.sign(a) != Math.sign(b)) { // так же, можно было написать условие: a*b < 0
+            let addition = a + b;
+            alert("сумма чисел = " + addition);
+            // console.log(addition);
+        }
+
+    </script>
+</body>
+
+</html>
